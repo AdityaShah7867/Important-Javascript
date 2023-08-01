@@ -1,2 +1,1 @@
-# Important-Javascript
-All important concepts of JS. 
+# Important-JavascriptAll important concepts of JS. 
