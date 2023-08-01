@@ -34,4 +34,43 @@ If a function takes a long time to execute, you cannot interact with the web bro
 A function that takes a long time to complete is called a blocking function. Technically, a blocking function blocks all the interactions on the webpage, such as mouse click.
 
 
+The web browser also has other components, not just the JavaScript engine.
+
+When you call the setTimeout() function, make a fetch request, or click a button, the web browser can do these activities concurrently and asynchronously.
+
+The setTimeout(), fetch requests, and DOM events are parts of the Web APIs of the web browser.
+
+In our example, when calling the setTimeout() function, the JavaScript engine places it on the call stack, and the Web API creates a timer that expires in 1 second.
+
+![javascript-event-loop-step-1](https://github.com/AdityaShah7867/Important-Javascript/assets/121731399/a8f3c65b-d31b-42c5-a369-c687380a89c5)
+
+Then JavaScript engine place the task() function is into a queue called a callback queue or a task queue:
+
+![javascript-event-loop-step-2 (1)](https://github.com/AdityaShah7867/Important-Javascript/assets/121731399/cfc1a8e6-e916-4b75-8b01-ccce39086270)
+
+The event loop is a constantly running process that monitors both the callback queue and the call stack.
+
+If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. If the callback queue is empty, nothing will happen:
+
+![javascript-event-loop-step-3](https://github.com/AdityaShah7867/Important-Javascript/assets/121731399/76c6cbbd-7aee-4b00-94f1-1d2dc63dd3b9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [Useful website](https://www.javascripttutorial.net/javascript-event-loop/)
