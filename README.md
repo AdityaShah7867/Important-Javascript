@@ -55,8 +55,36 @@ If the call stack is not empty, the event loop waits until it is empty and place
 ![javascript-event-loop-step-3](https://github.com/AdityaShah7867/Important-Javascript/assets/121731399/76c6cbbd-7aee-4b00-94f1-1d2dc63dd3b9)
 
 
+#What is asynchronous Javascript?
+
+Asynchronicity means that if JavaScript has to wait for an operation to complete, it will execute the rest of the code while waiting.
+
+Note that JavaScript is single-threaded. This means that it carries out asynchronous operations via the callback queue and event loop.
+
+In synchronous JavaScript, each function is performed in turn, waiting for the previous one to complete before executing the subsequent one. Synchronous code is written from top to bottom.
+
+![68747470733a2f2f692e696d6775722e636f6d2f45596a414b4d422e706e67-768x576](https://github.com/AdityaShah7867/Important-Javascript/assets/121731399/06b703f7-f4bf-4680-9106-39b3632836df)
 
 
+To understand what synchronous JavaScript means, let us consider the code snippet below.
+
+//synchronous javascript
+
+console.log("synchronous.");
+
+console.log("synchronous javascript!")
+
+console.log("synchronous again!")
+If we go ahead and run the above code, we get:
+
+//Output
+
+"synchronous"
+"synchronous javascript!"
+"synchronous again!"
+This shows that synchronous JavaScript runs from top to bottom, as we can observe the console running the function linearly from top to bottom.
+
+With the code above, the console first logs synchronous to the terminal, then synchronous javascript! and synchronous again!. This is an example of synchronous JavaScript since the program executes code in the order it is written.
 
 
 
